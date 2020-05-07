@@ -1,6 +1,13 @@
 name: 'Robot Framework'
 description: 'Run Robot Framework tests'
+inputs:
+  browser:
+    description: 'The browser to execute tests on'
+    required: false
+    default: 'firefox'
 runs:
   using: 'docker'
   image: docker://ppodgorsek/robot-framework:latest
+  args:
+    - ${{inputs.browser}}
 
