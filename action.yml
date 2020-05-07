@@ -4,4 +4,6 @@ description: 'Run Robot Framework tests'
 runs:
   using: 'docker'
   image: docker://ppodgorsek/robot-framework:latest
+  args:
+    - '--shm-size=4g'
 
